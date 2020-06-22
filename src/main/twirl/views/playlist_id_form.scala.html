@@ -1,0 +1,14 @@
+@()
+@layouts.html.default("Queennon: Your  music taste buddy", "Queennon"){
+  <p>Do enter the playlist id of the playlist you want to generate a clone(lol) for. To get the playlist's spotify id,
+     simply go to spotify web (open.spotify.com), click on your playlist, check the url on your address bar, it will be something like open.spotify.com/playlist/xxxxxxx. 
+     Copy the string (xxx) and paste it here as the playlist id, then submit!
+
+  </p>
+    <form action="/playlist" method="get">
+        <label for="playlist_id">Playlist ID:</label><br>
+        <input type="text" id="playlist_id" name="playlist_id" value="xxx"><br>
+       
+        <input type="submit" value="Submit">
+      </form>
+}
