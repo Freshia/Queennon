@@ -3,7 +3,7 @@
 ## Build & Run ##
 
 ```sh
-$ cd quennon
+$ cd Queennon
 $ sbt
 > jetty:start
 > browse
