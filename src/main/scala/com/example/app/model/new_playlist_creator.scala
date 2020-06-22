@@ -21,10 +21,10 @@ class new_playlist_creator{
         var playlist_id = "";
         if(user_id!=""){
             val response = Http("https://api.spotify.com/v1/users/"+user_id + "/playlists")
-        .headers(Seq("Authorization" -> ("Bearer " + access_token),"content-Type" -> "application/json"))
-        .postData("""{"name":""""+playlist_name+"""","public":"true"}""").option(HttpOptions.readTimeout(10000)).asString.body
+                .headers(Seq("Authorization" -> ("Bearer " + access_token),"content-Type" -> "application/json"))
+                .postData("""{"name":""""+playlist_name+"""","public":"true"}""").option(HttpOptions.readTimeout(10000)).asString.body
        
-        println(response);
+            println(response);
         val json = ujson.read(response)
         playlist_id = json("id").str
         
